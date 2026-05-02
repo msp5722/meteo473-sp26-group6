@@ -1,0 +1,329 @@
+/* ================= MP made changes in the first half and PD made changes in the second half. ================= */
+
+/* ================= Base ================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #f6f8fc;
+    color: #1c2430;
+}
+
+/* ================= Nav Bar ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #e6eaf2;
+    position: sticky;
+    top: 0;
+}
+
+.nav-title {
+    font-weight: 700;
+    color: #1f4e8c;
+}
+
+.nav-links a {
+    color: #2b3a55;
+    text-decoration: none;
+    margin-left: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.nav-links a:hover {
+    background: #eaf2ff;
+}
+
+/* ================= Hero ================= */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #eaf2ff, #ffffff);
+    border-bottom: 1px solid #e6eaf2;
+}
+.hero {
+    background: linear-gradient(135deg, #061427, #0b2a4a);
+    color: white;
+}
+}
+.hero h1 {
+    font-size: 2.6rem;
+    margin: 0;
+    color: #1f4e8c;
+}
+
+.hero p {
+    opacity: 0.75;
+}
+/* ================= PANELS ================= */
+.panel {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e6eaf2;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+/* ================= Grid ================= */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ================= Tags ================= */
+.tag-grid span {
+    background: #eef5ff;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #1f4e8c;
+    border: 1px solid #d6e6ff;
+}
+
+/* ================= Percentages ================= */
+.stress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.stress-card {
+    background: #ffffff;
+    border: 1px solid #e6eaf2;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.stress-card .title {
+    font-weight: 600;
+    color: #1f4e8c;
+    margin-bottom: 6px;
+}
+
+.weight {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* bar background */
+.bar {
+    width: 100%;
+    height: 8px;
+    background: #eef2f7;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* bar fill */
+.bar div {
+    height: 100%;
+    background: linear-gradient(90deg, #4da3ff, #1f4e8c);
+}
+
+/* Final Index Display */
+.final-index {
+    margin-top: 20px;
+    padding: 18px;
+    text-align: center;
+    background: linear-gradient(135deg, #eaf2ff, #ffffff);
+    border: 1px solid #d6e6ff;
+    border-radius: 12px;
+}
+
+.final-index .label {
+    font-weight: 600;
+    color: #1f4e8c;
+}
+
+.big-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0b3a6f;
+    margin-top: 6px;
+}
+
+/* ============ Stress Scale =================*/
+.subtext {
+    opacity: 0.75;
+    margin-top: -6px;
+    margin-bottom: 14px;
+}
+
+.scale-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+}
+
+.scale-item {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #e6eaf2;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.scale-item .range {
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.scale-item .label {
+    font-weight: 600;
+    margin-top: 4px;
+    display: block;
+}
+
+.scale-item .desc {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+.low {
+    border-left: 5px solid #4da3ff;
+}
+
+.mod {
+    border-left: 5px solid #6bb7ff;
+}
+
+.elev {
+    border-left: 5px solid #ffcc66;
+}
+
+.high {
+    border-left: 5px solid #ff884d;
+}
+
+.extreme {
+    border-left: 5px solid #ff4d4d;
+}
+/* ================= Viewer ================= */
+
+#viewer {
+    padding: 26px;
+}
+
+/* --- Controls container --- */
+.viewer-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+/* stack on small screens */
+@media (max-width: 700px) {
+    .viewer-controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* individual control group */
+.control-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* labels */
+#viewer label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #2b3a55;
+}
+
+/* dropdowns */
+#viewer select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d6e0ef;
+    background: #f9fbff;
+    font-size: 0.95rem;
+    transition: 0.2s ease;
+}
+
+#viewer select:focus {
+    outline: none;
+    border-color: #4da3ff;
+    box-shadow: 0 0 0 2px rgba(77,163,255,0.2);
+}
+
+/* slider */
+#hourSlider {
+    width: 100%;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+/* --- Image container --- */
+.plot-container {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0b1f3a;
+    padding: 3px;  /* thinner border */
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.2),
+                0 4px 12px rgba(0,0,0,0.06);
+}
+
+.plot-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* --- Buttons --- */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.controls button {
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, #1f4e8c, #4da3ff);
+    transition: all 0.2s ease;
+}
+
+.controls button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.viewer-explanation {
+    margin-top: 18px;
+    padding: 14px 16px;
+    background: #f4f7fb;
+    border-left: 4px solid #4da3ff;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #2b3a55;
+}
